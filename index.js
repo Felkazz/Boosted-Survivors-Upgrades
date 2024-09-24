@@ -76,7 +76,7 @@ function popperNodeTooltip(ref, content, opts) {
         computePosition(ref, content, popperOptions).then(({ x, y }) => {
             Object.assign(content.style, {
                 left: `${x}px`,
-                top: `${y + 2}px`,
+                top: `${y}px`,
             });
         });
         if (visible === true) {
