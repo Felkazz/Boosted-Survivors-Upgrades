@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Boosted Survivors Upgrades</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="cytoscape.min.js"></script> <!-- https://js.cytoscape.org/ -->
+        <script src="dagre.min.js"></script> <!-- https://github.com/dagrejs/dagre -->
+        <script src="cytoscape-dagre.js"></script> <!-- https://github.com/cytoscape/cytoscape.js-dagre -->
+        <script src="klay.js"></script> <!-- https://github.com/kieler/klayjs -->
+        <script src="cytoscape-klay.js"></script> <!-- https://github.com/cytoscape/cytoscape.js-klay -->
+        <script src="floating-ui-core.min.js"></script> <!-- https://floating-ui.com/ -->
+        <script src="floating-ui-dom.min.js"></script> <!-- https://floating-ui.com/ -->
+        <script src="cytoscape-popper.js"></script> <!-- https://github.com/cytoscape/cytoscape.js-popper -->
+        <script src="upgrades.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="main_container">
+            <h1 class="page_title">Boosted Survivors Upgrades</h1>
+            <div class="buttons_container">
+                <button id="damage_types" e="1">Damage Types</button><button id="heroes" e="1">Heroes</button><button id="weapons" e="1">Weapons</button><button id="spells" e="1">Spells</button><button id="dashes" e="1">Dashes</button><button id="hero_passives" e="1">Hero Passives</button><button id="weapon_passives" e="1">Weapon Passives</button><button id="spell_passives" e="1">Spell Passives</button><button id="dash_passives" e="1">Dash Passives</button><button id="everything" e="1">Everything</button>
+            </div>
+            <div class="cy_container">
+                <div id="camera_menu">
+                    <span class="controls_span"><label for="layout">Layout:</label>
+                    <select id="layout" name="layout">
+                        <option value="0">Random</option>
+                        <option value="1">Grid</option>
+                        <option value="2">Circle</option>
+                        <option value="3">Concentric</option>
+                        <option value="4">Breadth-first</option>
+                        <option value="5">Cose</option>
+                        <option value="6" selected>Dagre</option>
+                        <option value="7">Klay</option>
+                    </select></span>
+                    <span class="controls_span"><label>Zoom:</label>
+                    <button id="minus_zoom" class="zoom_button">-</button><button id="default_zoom" class="zoom_button">1:1</button><button id="plus_zoom" class="zoom_button">+</button></span>
+                    <span class="controls_span"><label for="grabbable">Grabbable:</label><input type="checkbox" id="grabbable" name="grabbable"></span>
+                    <button id="download" disabled>Download ⬇️</button>
+                </div>
+                <div id="cy"></div>
+            </div>
+        </div>
+        <div id="popper_container"></div>
+    </body>
+</html>
