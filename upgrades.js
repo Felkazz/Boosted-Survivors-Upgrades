@@ -2699,16 +2699,61 @@ const SPELLS = [
     },
     {
         name: "Spirit Missile",
-        description: "The dev revealed that this spell exists and there is a condition to unlock it, but I haven't found it yet.",
+        description: "Fire projectiles that curve towards the caster and have almost infinite travel distance.",
         image: "spirit_missile.png",
         unlock: [
             "Magic Missile",
-            "Unknown Condition"
+            "Spell Speed > 275"
         ],
         stats: [
             {
-                name: "Unkown Stats",
-                base: 0,
+                name: "Cooldown",
+                base: "6s",
+                boost: 0
+            },
+            {
+                name: "Charges",
+                base: 2,
+                boost: 2
+            },
+            {
+                name: "Cast Point",
+                base: "0.1s",
+                boost: 0
+            },
+            {
+                name: "Distance",
+                base: 300000,
+                boost: 0
+            },
+            {
+                name: "Speed",
+                base: 200,
+                boost: 25
+            },
+            {
+                name: "Knockback",
+                base: 2,
+                boost: 1
+            },
+            {
+                name: "Damage",
+                base: 150,
+                boost: 75
+            },
+            {
+                name: "Projectile Count",
+                base: 1,
+                boost: 0
+            },
+            {
+                name: "Size",
+                base: 12,
+                boost: 3
+            },
+            {
+                name: "Boomerang",
+                base: 5,
                 boost: 0
             }
         ],
