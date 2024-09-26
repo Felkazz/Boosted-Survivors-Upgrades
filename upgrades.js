@@ -581,7 +581,8 @@ const HEROES = [
             }
         ],
         connectTo: [
-            "Elder Vampire"
+            "Elder Vampire",
+            "Revenant"
         ]
     },
     {
@@ -626,6 +627,58 @@ const HEROES = [
                 name: "Size",
                 base: 2,
                 boost: 0
+            }
+        ],
+        connectTo: []
+    },
+    {
+        name: "Revenant",
+        description: "Gain the ability to return from death.",
+        image: "revenant.png",
+        unlock: [
+            "Vampiress",
+            "Life Steal < 6>"
+        ],
+        stats: [
+            {
+                name: "Health",
+                base: 100,
+                boost: 20
+            },
+            {
+                name: "Armor",
+                base: 3,
+                boost: 3
+            },
+            {
+                name: "Regeneration",
+                base: -20,
+                boost: 20
+            },
+            {
+                name: "iframes",
+                base: 0.2,
+                boost: 0
+            },
+            {
+                name: "Lifesteal",
+                base: "20%",
+                boost: "5%"
+            },
+            {
+                name: "Speed",
+                base: 40,
+                boost: 6
+            },
+            {
+                name: "Size",
+                base: 1,
+                boost: 0.2
+            },
+            {
+                name: "Extra Lives",
+                base: 2,
+                boost: 2
             }
         ],
         connectTo: []
