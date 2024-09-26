@@ -2261,6 +2261,7 @@ const SPELLS = [
             }
         ],
         connectTo: [
+            "Cursed Fire Wall",
             "Holy Fire Wall"
         ]
     },
@@ -2996,11 +2997,159 @@ const SPELLS = [
         connectTo: []
     },
     {
+        name: "Cursed Fire Wall",
+        description: "Curse enemies that touch your Fire Wall with unending flames.",
+        image: "cursed_fire_wall.png",
+        unlock: [
+            "Fire Wall",
+            "Hero Speed < 31"
+        ],
+        stats: [
+            {
+                name: "Cooldown",
+                base: "10s",
+                boost: 0
+            },
+            {
+                name: "Charges",
+                base: 1,
+                boost: 1
+            },
+            {
+                name: "Cast Point",
+                base: "0.1s",
+                boost: 0
+            },
+            {
+                name: "Distance",
+                base: 600,
+                boost: 100
+            },
+            {
+                name: "Speed",
+                base: 100,
+                boost: 0
+            },
+            {
+                name: "Knockback",
+                base: 1,
+                boost: 0.5
+            },
+            {
+                name: "Projectile Count",
+                base: 9,
+                boost: 3
+            },
+            {
+                name: "Size",
+                base: 10,
+                boost: 5
+            },
+            {
+                name: "Spread",
+                base: 5,
+                boost: 0
+            },
+            {
+                name: "Pierce",
+                base: 1,
+                boost: 0
+            },
+            {
+                name: "Speed Reduction",
+                base: 40,
+                boost: 0
+            },
+            {
+                name: "Modifier Stack",
+                base: 4,
+                boost: 2
+            }
+        ],
+        connectTo: [
+            "Blasphemous Fire Wall"
+        ]
+    },
+    {
         name: "Holy Fire Wall",
         description: "Bless your Fire Wall with the ability to absorb projectiles.",
         image: "holy_fire_wall.png",
         unlock: [
             "Fire Wall"
+        ],
+        stats: [
+            {
+                name: "Cooldown",
+                base: "10s",
+                boost: 0
+            },
+            {
+                name: "Charges",
+                base: 1,
+                boost: 1
+            },
+            {
+                name: "Cast Point",
+                base: "0.1s",
+                boost: 0
+            },
+            {
+                name: "Distance",
+                base: 600,
+                boost: 100
+            },
+            {
+                name: "Speed",
+                base: 100,
+                boost: 0
+            },
+            {
+                name: "Knockback",
+                base: 1,
+                boost: 0.5
+            },
+            {
+                name: "Projectile Count",
+                base: 9,
+                boost: 3
+            },
+            {
+                name: "Size",
+                base: 10,
+                boost: 5
+            },
+            {
+                name: "Spread",
+                base: 5,
+                boost: 0
+            },
+            {
+                name: "Pierce",
+                base: 1,
+                boost: 0
+            },
+            {
+                name: "Speed Reduction",
+                base: 40,
+                boost: 0
+            },
+            {
+                name: "Modifier Stack",
+                base: 4,
+                boost: 2
+            }
+        ],
+        connectTo: [
+            "Blasphemous Fire Wall"
+        ]
+    },
+    {
+        name: "Blasphemous Fire Wall",
+        description: "Absorbs projectiles and curses enemies that touch it.",
+        image: "blasphemous_fire_wall.png",
+        unlock: [
+            "Cursed Fire Wall or Holy Fire Wall",
+            "Hero Speed < 31"
         ],
         stats: [
             {
