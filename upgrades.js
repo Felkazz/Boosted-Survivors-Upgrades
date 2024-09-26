@@ -637,7 +637,7 @@ const HEROES = [
         image: "revenant.png",
         unlock: [
             "Vampiress",
-            "Life Steal < 6>"
+            "Life Steal < 6"
         ],
         stats: [
             {
