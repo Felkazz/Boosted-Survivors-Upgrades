@@ -401,6 +401,11 @@ function downloadButtonClick() {
     }
 }
 
+function outdatedClick() {
+    const div = document.getElementById("outdated");
+    div.style.display = "none";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     cytoscape.use(cytoscapeDagre);
     cytoscape.use(cytoscapeKlay);
@@ -423,4 +428,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.getElementById("grabbable").addEventListener("change", grabbableCheckboxChanged);
     document.getElementById("download").addEventListener("click", downloadButtonClick);
+    document.getElementById("outdated").addEventListener("click", outdatedClick);
 });
