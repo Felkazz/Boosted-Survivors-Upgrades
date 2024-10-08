@@ -102,6 +102,10 @@ canvas {
     text-align: justify;
 }
 
+.outdated_hidden {
+    display: none;
+}
+
 /*.node_img_container {
     position: absolute;
     width: 50px;
@@ -161,6 +165,10 @@ canvas {
 .card_body {
     line-height: 14px;
     font-size: 14px;
+}
+
+.card_body tr:nth-child(odd) {
+    background-color: #3A3A3A;
 }
 
 .card_body tr td:first-child {

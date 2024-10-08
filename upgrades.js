@@ -116,13 +116,55 @@ const HEROES = [
             }
         ],
         connectTo: [
+            "Horse Armor",
             "Elementalist",
             "Rogue",
             "Warrior",
             "Wizard",
-            "Horse Armor",
             "Vampiress"
         ]
+    },
+    {
+        name: "Horse Armor",
+        description: "Double all of your hero's body stat scaling. Works retroactively.",
+        image: "horse_armor.png",
+        unlock: [
+            "Student",
+            "Hero Size > 1.3"
+        ],
+        stats: [
+            {
+                name: "Health",
+                base: 100,
+                boost: 20
+            },
+            {
+                name: "Armor",
+                base: 3,
+                boost: 3
+            },
+            {
+                name: "Regeneration",
+                base: 2,
+                boost: 4
+            },
+            {
+                name: "iframes",
+                base: 0.3,
+                boost: 0
+            },
+            {
+                name: "Speed",
+                base: 40,
+                boost: 6
+            },
+            {
+                name: "Size",
+                base: 1,
+                boost: 0
+            }
+        ],
+        connectTo: []
     },
     {
         name: "Elementalist",
@@ -212,7 +254,7 @@ const HEROES = [
     },
     {
         name: "Warrior",
-        description: "Increases base stats and damage.",
+        description: "Increased base stats and damage scaling.",
         image: "warrior.png",
         unlock: [
             "Student"
@@ -241,7 +283,7 @@ const HEROES = [
             {
                 name: "Speed",
                 base: 40,
-                boost: 6
+                boost: 9
             },
             {
                 name: "Size",
@@ -381,7 +423,7 @@ const HEROES = [
     },
     {
         name: "Berserk",
-        description: "Gain huge attack damage and attack speed, but lose armor and health regen upgrades.",
+        description: "Gain huge attack damage and attack speed scaling, but lose armor and health regen upgrades.",
         image: "berserk.png",
         unlock: [
             "Warrior"
@@ -489,48 +531,6 @@ const HEROES = [
                 name: "Ego",
                 base: 1,
                 boost: 0.2
-            }
-        ],
-        connectTo: []
-    },
-    {
-        name: "Horse Armor",
-        description: "Double all of your hero's body stat scaling. Works retroactively.",
-        image: "horse_armor.png",
-        unlock: [
-            "Student",
-            "Hero Size > 1.3"
-        ],
-        stats: [
-            {
-                name: "Health",
-                base: 100,
-                boost: 20
-            },
-            {
-                name: "Armor",
-                base: 3,
-                boost: 3
-            },
-            {
-                name: "Regeneration",
-                base: 2,
-                boost: 4
-            },
-            {
-                name: "iframes",
-                base: 0.3,
-                boost: 0
-            },
-            {
-                name: "Speed",
-                base: 40,
-                boost: 6
-            },
-            {
-                name: "Size",
-                base: 1,
-                boost: 0.1
             }
         ],
         connectTo: []
@@ -763,7 +763,7 @@ const WEAPONS = [
         connectTo: [
             "Blood Reaver",
             "Grand Axe",
-            "Spinter's Scythe"
+            "Spinster's Scythe"
         ]
     },
     {
@@ -848,7 +848,7 @@ const WEAPONS = [
     },
     {
         name: "Katar",
-        description: "Extremely low Damage, but extremely high attack speed. Can't change it's size.",
+        description: "Extremely low damage, but extremely high attack speed. Can't change it's size.",
         image: "katar.png",
         unlock: [
             "Starting weapon"
@@ -893,7 +893,7 @@ const WEAPONS = [
     },
     {
         name: "Staff",
-        description: "High Knockback. Otherwise, trash.",
+        description: "High knockback. Otherwise, trash.",
         image: "staff.png",
         unlock: [
             "Starting weapon"
@@ -926,9 +926,9 @@ const WEAPONS = [
             }
         ],
         connectTo: [
+            "Disco Stick",
             "Druid Staff",
-            "Stunning Staff",
-            "Disco Stick"
+            "Stunning Staff"
         ]
     },
     {
@@ -1043,6 +1043,11 @@ const WEAPONS = [
             {
                 name: "Width",
                 base: 40,
+                boost: 3
+            },
+            {
+                name: "Fire Stacks",
+                base: 6,
                 boost: 3
             }
         ],
@@ -1209,9 +1214,9 @@ const WEAPONS = [
         connectTo: []
     },
     {
-        name: "Spinter's Scythe",
+        name: "Spinster's Scythe",
         description: "Your attacks become segmented, giving your knockback a steep angle.",
-        image: "spinters_scythe.png",
+        image: "spinsters_scythe.png",
         unlock: [
             "Axe",
             "Weapon Width > 112"
@@ -1231,6 +1236,11 @@ const WEAPONS = [
                 name: "Knockback",
                 base: 5,
                 boost: 5
+            },
+            {
+                name: "Knockback Angle",
+                base: 80,
+                boost: 40
             },
             {
                 name: "Range",
@@ -1681,6 +1691,58 @@ const WEAPONS = [
         connectTo: []
     },
     {
+        name: "Disco Stick",
+        description: "True weapon of Disco Wizard.",
+        image: "disco_stick.png",
+        unlock: [
+            "Staff",
+            "Weapon Attack Speed < 22"
+        ],
+        stats: [
+            {
+                name: "Damage",
+                base: 25,
+                boost: 60
+            },
+            {
+                name: "Attack Speed",
+                base: 50,
+                boost: 10
+            },
+            {
+                name: "Knockback",
+                base: 5,
+                boost: 5
+            },
+            {
+                name: "Range",
+                base: 750,
+                boost: 0
+            },
+            {
+                name: "Width",
+                base: 3,
+                boost: 0
+            },
+            {
+                name: "Max Multi Hits",
+                base: 10,
+                boost: 1
+            },
+            {
+                name: "Multi Hit Delay",
+                base: "0.5s",
+                boost: 0
+            },
+            {
+                name: "Multi Hit Chance",
+                base: "16%",
+                boost: "8%"
+            }
+        ],
+        connectTo: []
+    },
+    {
         name: "Druid Staff",
         description: "Your attacks have a chance to increase the 'count' of your next spell cast.",
         image: "druid_staff.png",
@@ -1758,58 +1820,6 @@ const WEAPONS = [
                 name: "Stun Duration",
                 base: "0.5s",
                 boost: "0.25s"
-            }
-        ],
-        connectTo: []
-    },
-    {
-        name: "Disco Stick",
-        description: "True weapon of Disco Wizard.",
-        image: "disco_stick.png",
-        unlock: [
-            "Staff",
-            "Weapon Attack Speed < 22"
-        ],
-        stats: [
-            {
-                name: "Damage",
-                base: 25,
-                boost: 60
-            },
-            {
-                name: "Attack Speed",
-                base: 50,
-                boost: 10
-            },
-            {
-                name: "Knockback",
-                base: 5,
-                boost: 5
-            },
-            {
-                name: "Range",
-                base: 750,
-                boost: 0
-            },
-            {
-                name: "Width",
-                base: 3,
-                boost: 0
-            },
-            {
-                name: "Max Multi Hits",
-                base: 10,
-                boost: 1
-            },
-            {
-                name: "Multi Hit Delay",
-                base: "0.5s",
-                boost: 0
-            },
-            {
-                name: "Multi Hit Chance",
-                base: "16%",
-                boost: "8%"
             }
         ],
         connectTo: []
@@ -2416,7 +2426,7 @@ const SPELLS = [
             {
                 name: "Distance",
                 base: 300,
-                boost: 50
+                boost: 0
             },
             {
                 name: "Speed",
@@ -2426,26 +2436,21 @@ const SPELLS = [
             {
                 name: "Knockback",
                 base: 1,
-                boost: 2
+                boost: 0
             },
             {
                 name: "Damage",
                 base: 1,
-                boost: 1
+                boost: 0
             },
             {
                 name: "Projectile Count",
                 base: 1,
-                boost: 1
-            },
-            {
-                name: "Size",
-                base: 1,
-                boost: 0
+                boost: 3
             },
             {
                 name: "Spread",
-                base: 25,
+                base: 27,
                 boost: 0
             },
             {
@@ -3464,6 +3469,16 @@ const SPELLS = [
                 boost: 50
             },
             {
+                name: "Projectile Count",
+                base: 1,
+                boost: 0
+            },
+            {
+                name: "Size",
+                base: 12,
+                boost: 3
+            },
+            {
                 name: "Health",
                 base: 100,
                 boost: 100
@@ -3510,13 +3525,13 @@ const SPELLS = [
                 boost: 0
             },
             {
-                name: "Knockback",
-                base: 10,
+                name: "Cast Point",
+                base: "0.2s",
                 boost: 0
             },
             {
-                name: "Cast Point",
-                base: "0.2s",
+                name: "Knockback",
+                base: 10,
                 boost: 0
             },
             {
@@ -3633,7 +3648,7 @@ const SPELLS = [
             {
                 name: "Attack Speed",
                 base: 50,
-                boost: 10
+                boost: 5
             }
         ],
         connectTo: []
@@ -3866,8 +3881,8 @@ const HERO_PASSIVES = [
             },
             {
                 name: "Block Chance",
-                base: "20%",
-                boost: "3%"
+                base: 20,
+                boost: 3
             }
         ],
         connectTo: []
@@ -3899,12 +3914,12 @@ const HERO_PASSIVES = [
         stats: [
             {
                 name: "Tripple Shop Chance %",
-                base: 5,
+                base: "5%",
                 boost: 0
             },
             {
                 name: "Double Shop Chance %",
-                base: 15,
+                base: "15%",
                 boost: 0
             }
         ],
@@ -3950,7 +3965,7 @@ const WEAPON_PASSIVES = [
             {
                 name: "Stun Chance",
                 base: "20%",
-                boost: "55"
+                boost: "5%"
             },
             {
                 name: "Stun Duration",
@@ -4038,7 +4053,7 @@ const WEAPON_PASSIVES = [
         description: "Attacks have a chance to repeat.",
         image: "multi_hit.png",
         unlock: [
-            "Any weapon without multi-hit"
+            "Any weapon"
         ],
         stats: [
             {
@@ -4214,13 +4229,18 @@ const SPELL_PASSIVES = [
                 name: "Acid Stacks",
                 base: 1,
                 boost: 1
+            },
+            {
+                name: "Modifier Duration",
+                base: "5s",
+                boost: 0
             }
         ],
         connectTo: []
     },
     {
         name: "SSS Battery",
-        description: "Adds a chance to trigger lightning strikes to your spell.",
+        description: "Adds a chance to trigger Lightning strikes to your spell.",
         image: "sss_battery.png",
         unlock: [
             "Any spell"
@@ -4351,7 +4371,7 @@ const SPELL_PASSIVES = [
     },
     {
         name: "Piercing Projectile",
-        description: "Magic Missile pierces through.",
+        description: "Magic Missile pierces through enemies.",
         image: "piercing_projectile.png",
         unlock: [
             "Any projectile based spell"

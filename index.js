@@ -113,7 +113,7 @@ function generateCard(upgrade) {
     tbody.classList.add("card_body");
     if (upgrade.description !== "") {
         tr = document.createElement("tr");
-        tr.classList.add("bottom_border");
+        //tr.classList.add("bottom_border");
         td = document.createElement("td");
         td.colSpan = 2;
         td.textContent = upgrade.description;
@@ -122,7 +122,7 @@ function generateCard(upgrade) {
     }
     if (upgrade.unlock.length > 0) {
         tr = document.createElement("tr");
-        tr.classList.add("bottom_border");
+        //tr.classList.add("bottom_border");
         td = document.createElement("td");
         td.colSpan = 2;
         td.textContent = "Unlock conditions:";
@@ -133,7 +133,7 @@ function generateCard(upgrade) {
         tr.appendChild(td);
         tbody.appendChild(tr);
     }
-    upgrade.stats.forEach(stat => {
+    upgrade.stats.forEach((stat, i) => {
         tr = document.createElement("tr");
         td = document.createElement("td");
         td.colSpan = 2;
@@ -326,7 +326,7 @@ function upgradesButtonClick(ev) {
 
 function layoutSelectChanged(ev) {
     if (cy) {
-        let layout = cy.layout(LAYOUTS[document.getElementById("layout").selectedIndex]);
+        let layout = cy.layout(LAYOUTS[ev.target.selectedIndex]);
         layout.run();
     }
 }
